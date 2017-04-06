@@ -1,4 +1,4 @@
-//���㷨˼�룺������ת�����ַ��������ַ�����ͷ���м��ж�
+//本算法思想：将整数转化成字符串，从字符串两头向中间判断
 class Solution {
 public:
     bool isPalindrome(int x) {
@@ -18,3 +18,4 @@ public:
         return true;
     }
 };
+//注：一个更好的算法：根据整数反转改编而成，只需转换一半即可
