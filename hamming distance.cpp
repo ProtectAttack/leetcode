@@ -1,9 +1,24 @@
-//ººÃ÷ÖØÁ¿  Çó½âË¼Ïë£ºÁ½¸öÊıÒì»òÒÔºóµÄ½á¹û×ªÎª¶ş½øÖÆÖĞ1µÄ¸öÊı
+//æ±‰æ˜é‡é‡  æ±‚è§£æ€æƒ³ï¼šä¸¤ä¸ªæ•°å¼‚æˆ–ä»¥åçš„ç»“æœè½¬ä¸ºäºŒè¿›åˆ¶ä¸­1çš„ä¸ªæ•°
 
 class Solution {
 public:
     int hammingDistance(int x, int y) {
         bitset<31>xxory=x^y;
         return xxory.count();
+    }
+};
+
+
+//æ–°é¢–çš„è§£æ³•
+class Solution {
+public:
+    int hammingDistance(int x, int y) {
+        int count=0;
+        int resu=x^y;
+        while(resu){
+            resu&=resu-1;//å°†æœ€å³ä¾§çš„1å˜ä¸º0
+            count++;
+        }
+        return count;
     }
 };
